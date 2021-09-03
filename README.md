@@ -31,7 +31,7 @@ The script is intended to be run as a cronjob. Edit your crontab:
 crontab -e
 ```
 
-Add the following line (use this link if you want to change how often the script is called):
+Add the following line (use [this link](https://crontab.guru/#1/5_*_*_*_*) to choose how often you want the job to run and change the following line as needed):
 
 ```
 1/5 * * * * python3 /path/to/script/amber-pi.py
