@@ -6,7 +6,7 @@ amber-pi is a Python script for polling the [Amber Electric API](https://app.amb
 
 Ensure you have Python 3.x installed on your system (it's pre-installed on [Raspberry Pi OS](https://www.raspberrypi.org/software/)). Install the dependencies from requirements.txt if they're not already installed (again, these are pre-installed with Raspberry Pi OS):
 
-```bash
+```shell
 cd /path/to/requirements
 
 python3 -m pip install -r requirements.txt
@@ -16,29 +16,31 @@ python3 -m pip install -r requirements.txt
 
 Edit the script and add your API key and site ID from the Amber Electric API. The variables you need to edit are:
 
-* `apiKey`
-* `siteId`
+- `apiKey`
+- `siteId`
 
 You can also optionally adjust the prices (in c/kWh) that trigger changes to the lights. The variables are:
 
-* `alertHigh`: Above this price, the red light is set.
-* `alertLow`: Below this price, the green light is set.
-* All prices in between will trigger an amber light.
+- `alertHigh`: Above this price, the red light is set.
+- `alertLow`: Below this price, the green light is set.
+- All prices in between will trigger an amber light.
 
 The script is intended to be run as a cronjob. Edit your crontab:
 
-```bash
+```shell
 crontab -e
 ```
 
 Add the following line (use [this link](https://crontab.guru/#1/5_*_*_*_*) to choose how often you want the job to run and change the following line as needed):
 
-```
+```shell
 1/5 * * * * python3 /path/to/script/amber-pi.py
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
+
 [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
