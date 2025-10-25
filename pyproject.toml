@@ -3,7 +3,7 @@ name = "amber-pi"
 version = "0.1"
 description = "script for polling the Amber Electric API and using the data to set PiStop traffic light LEDs"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.14, <3.15"
 dependencies = [
     "requests==2.32.5",
     "rpi-gpio==0.7.1",
