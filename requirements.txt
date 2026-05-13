@@ -1,2 +1,2 @@
-requests==2.34.0
+requests==2.34.1
 RPi.GPIO==0.7.1
